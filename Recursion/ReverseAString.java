@@ -6,11 +6,12 @@ public class ReverseAString {
         if(str == "" ){
             return "";    
         }    
-        return Rev(str.substring(1, str.length() - 1) ) + str.charAt(0);
+        return Rev(str.substring(1) ) + str.charAt(0);
     }
 
     public static void main(String[] args) {
         String a = "Hello";
+        //a.substring
         System.out.println(Rev(a));
     }
 }
