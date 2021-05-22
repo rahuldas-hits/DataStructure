@@ -23,14 +23,12 @@ public class LinearSearch {
 
         for(int i=0;i<arr.length;i++){
             if(num == arr[i]){
-                //swap();
+                System.out.println("Index value is " + i);
+                move(arr,i);
                 return 1;
             }
         }
         //display(arr);
-
-        
-
         return 0;
     }
 
@@ -38,6 +36,16 @@ public class LinearSearch {
     public static void move(int[] arr, int index){
         for(int i=0;i<arr.length;i++){
             
+            //System.out.println("Index value in called function is " + index);
+            //System.out.println("Index value in called function is " + i);
+            //move index n to n-1 and n to n+1
+            if(i == index){
+                int temp = arr[index-1];
+                arr[index-1] = arr[index];
+                arr[index] = temp;
+                display(arr);
+            }
+            //display(arr);
         }
     }
 
@@ -49,7 +57,7 @@ public class LinearSearch {
     }
 
     public static void main(String[] args) {
-        int a = 20;
+        int a = 70;
         //System.out.println(src(a));
         int res = src(a);
         if(res == 1){
