@@ -23,15 +23,23 @@ public class LinearSearch {
 
         for(int i=0;i<arr.length;i++){
             if(num == arr[i]){
-                
+                //swap();
                 return 1;
             }
         }
         //display(arr);
 
+        
+
         return 0;
     }
 
+
+    public static void move(int[] arr, int index){
+        for(int i=0;i<arr.length;i++){
+            
+        }
+    }
 
     public static void display(int [] arry){
         for(int i=0; i < arry.length-1; i++){
