@@ -4,7 +4,44 @@ public class BinarySearch {
 
     // declares and initialize an Array of integers.
 
-    public static int binSearch(int low,int high,int key){
+    public static int binSearch(int arr[],int low,int high,int key){        
+
+        while(low <= high){
+            int mid = ((low + high)/2);
+            if(key == arr[mid]){
+                return mid;
+            }else if (key < arr[mid-1]){
+                high = mid-1;
+            }else{
+                low = mid+1;
+            }
+        }
+        return -1;
+    }
+    
+
+    public static int RecursivebinSearch(int arr[],int low,int high,int key){
+        
+        if(low <= high){
+            int mid = ((low + high)/2);
+            if(key == arr[mid]){
+                return mid;
+            }else if (key < arr[mid-1]){
+                //high = mid-1;
+                return RecursivebinSearch(arr,low,mid-1,key);
+            }else{
+                //low = mid+1;
+                return RecursivebinSearch(arr,mid+1,high,key);
+
+            }
+        }
+        return -1;
+    }
+
+
+
+    public static void main(String[] args) {
+
         int[] arr = new int[10];
 
         //assign an array
@@ -18,29 +55,14 @@ public class BinarySearch {
         arr[7] = 80;
         arr[8] = 90;
         arr[9] = 100;
-        //arr[10] = 110; 
-        //binSearch(arr,)
 
-        while(low <= high){
-            int mid = ((low + high)/2);
-            if(key == arr[mid]){
-                return mid;
-            }else if (key < arr[mid-1]){
 
-                high = mid-1;
-            }else{
-                low = mid+1;
-            }
-        }
-        return -1;
-    }
-    
-    public static void main(String[] args) {
         int low = 0;
         int high = 9;
-        int key = 50;
-        int res = binSearch(low,high,key);
-        System.out.print(res);
+        int key = 80;
+        int res = binSearch(arr,low,high,key);
+        System.out.println(res);
+        System.out.println("Recursive call " + RecursivebinSearch(arr,low,high,key));
     }
 
 
