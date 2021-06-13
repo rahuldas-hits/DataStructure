@@ -3,15 +3,15 @@ import java.util.*;
 import Tree.Node;
 import java.util.Queue;
 
-// class Node {
-//     int data;
-//     Node left,right;
+class Node {
+    int data;
+    Node left,right;
 
-//     public Node(int item){
-//         data = item;
-//         left = right = null;
-//     }
-// }
+    public Node(int item){
+        data = item;
+        left = right = null;
+    }
+}
 
 public class LevelOrder {
     Node root;
