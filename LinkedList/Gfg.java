@@ -5,14 +5,14 @@ sorted linked lists */
 import java.util.*;
 
 /* Link list node */
-class Node
-{
-	int data;
-	Node next;
-	Node(int d) {
-        data = d;
-        next = null;}
-}
+// class Node
+// {
+// 	int data;
+// 	Node next;
+// 	Node(int d) {
+//         data = d;
+//         next = null;}
+// }
 	
 class MergeLists{
     Node head;
