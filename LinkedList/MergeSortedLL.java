@@ -10,8 +10,10 @@ class Node{
     }
 }
 
-class Merge{
-    Node sortedMerge(Node Node1, Node Node2){
+public class MergeSortedLL {
+    Node root;
+
+    public static Node sortedMerge(Node Node1, Node Node2){
         Node dummyNode = new Node(0);
         Node tail = dummyNode;
 
@@ -33,25 +35,9 @@ class Merge{
                 Node1 = Node1.next;
             }
             tail = tail.next;
+            return dummyNode.next;
         }
-        return dummyNode.next;
-    }
-}
-
-public class MergeSortedLL {
-    Node root;
-
-    public void insertAtEnd(Node A){
-        
-        if(root == null){
-            root = A;
-        }else{
-            Node temp = root;
-            while(temp.next != null){
-                temp = temp.next;
-            }
-            temp.next = A;
-        }
+        // return dummyNode.next;
     }
 
     public static void main(String[] args) {
@@ -67,6 +53,8 @@ public class MergeSortedLL {
         ll2.root.next = new Node(3);
         ll2.root.next.next = new Node(6);
         ll2.root.next.next.next = new Node(10);
+
+        System.out.print(sortedMerge(ll1.root,ll2.root));
     }
     
 }
