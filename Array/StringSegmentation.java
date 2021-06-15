@@ -14,8 +14,8 @@ public class StringSegmentation {
         return true;
 
         for (int i = 1; i <= size; i++) {
-            System.out.println("substring is " + wrd.substring(0, i));
-            System.out.println("substring is " + wrd.substring(i, size));
+            //System.out.println("substring is " + wrd.substring(0, i));
+            //System.out.println("substring is " + wrd.substring(i, size));
             if( dictionary.contains(wrd.substring(0,i) ) && word(wrd.substring(i,size)) ) 
                 return true;
         }

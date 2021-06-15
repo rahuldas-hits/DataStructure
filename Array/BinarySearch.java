@@ -2,7 +2,7 @@ package Array;
 
 public class BinarySearch {
 
-    // declares and initialize an Array of integers.
+    
 
     public static int binSearch(int arr[],int low,int high,int key){        
 

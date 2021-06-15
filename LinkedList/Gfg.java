@@ -2,17 +2,17 @@ package LinkedList;
 
 /* Java program to merge two
 sorted linked lists */
-import java.util.*;
+//import java.util.*;
 
 /* Link list node */
-// class Node
-// {
-// 	int data;
-// 	Node next;
-// 	Node(int d) {
-//         data = d;
-//         next = null;}
-// }
+class Node
+{
+	int data;
+	Node next;
+	Node(int d) {
+        data = d;
+        next = null;}
+}
 	
 class MergeLists{
     Node head;
