@@ -1,0 +1,16 @@
+import java.util.Arrays;
+    public class singleNumber {
+     public static void main(String args[]){
+        int[] arr = {4,1,2,1,2};
+        System.out.println("The single number in the array is: " + singleNumber(arr));
+    }
+
+    public static int singleNumber(int[] nums) {
+        int n = nums.length;
+        Arrays.sort(nums);
+        for(int i =0 ; i < n -1; i +=2){
+            if(nums[i] != nums[i+1]) return nums[i];
+        }
+        return nums[n-1];
+    }
+}
