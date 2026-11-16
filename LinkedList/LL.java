@@ -64,6 +64,12 @@ public class LL {
     }
 
     public static Node deleteFirst(Node head){
+        if(head == null){
+            return null;
+        }
+        Node temp = head;
+        head = head.next;
+        temp = null;
         return head;
     }
 
