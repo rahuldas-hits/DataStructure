@@ -86,6 +86,22 @@ public class LL {
     }
 
     public static Node deleteAtIndex(Node head, int index){
+        if(index == 0){
+            return deleteFirst(head);
+        }
+        Node curr = head;
+        for(int i = 0; i < index - 1; i++){
+            if(curr == null || curr.next == null){
+                System.out.println("Index out of bounds");
+                return head;
+            }
+            curr = curr.next;
+        }
+        if(curr.next == null){
+            System.out.println("Index out of bounds");
+            return head;
+        }
+        curr.next = curr.next.next;
         return head;
     }
 
