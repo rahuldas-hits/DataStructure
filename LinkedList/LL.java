@@ -106,6 +106,15 @@ public class LL {
     }
 
     public static Node search(Node head, int key){
+        Node curr = head;
+        while(curr != null){
+            if(curr.data == key){
+                System.out.println("Key found: " + key);
+                return curr;
+            }
+            curr = curr.next;
+        }
+        System.out.println("Key not found");
         return head;
     }
 
