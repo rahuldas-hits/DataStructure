@@ -18,6 +18,7 @@ public class LL {
         head.next.next = new Node(30);
         head = insertAtFirst(head, 5);
         head = insertAtLast(head, 40);
+        head = insertAtIndex(head, 2, 15);
     
         printLLRec(head);
     }
@@ -45,6 +46,20 @@ public class LL {
     }
 
     public static Node insertAtIndex(Node head, int index, int data){
+        if(index == 0){
+            return insertAtFirst(head, data);
+        }
+        Node newNode = new Node(data);
+        Node curr = head;
+        for(int i = 0; i < index - 1; i++){
+            if(curr == null){
+                System.out.println("Index out of bounds");
+                return head;
+            }
+            curr = curr.next;
+        }
+        newNode.next = curr.next;
+        curr.next = newNode;
         return head;
     }
 
