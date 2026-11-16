@@ -16,16 +16,31 @@ public class LL {
         Node head = new Node(10);
         head.next = new Node(20);
         head.next.next = new Node(30);
+        head = insertAtFirst(head, 5);
+        head = insertAtLast(head, 40);
     
-        printLL(head);
+        printLLRec(head);
     }
 
     public static Node insertAtFirst(Node head, int data){
-        
-        return head;
+        if(head == null){
+            return new Node(data);
+        }
+        Node newNode = new Node(data);
+        newNode.next = head;
+        return newNode;
     }
 
     public static Node insertAtLast(Node head, int data){
+        Node newNode = new Node(data);
+        if(head == null){
+            return newNode;
+        }
+        Node curr = head;
+        while(curr.next != null){
+            curr = curr.next;
+        }
+        curr.next = newNode;
         return head;
     }
 
@@ -42,6 +57,10 @@ public class LL {
     }
 
     public static Node deleteAtIndex(Node head, int index){
+        return head;
+    }
+
+    public static Node search(Node head, int key){
         return head;
     }
 
